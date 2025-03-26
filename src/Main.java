@@ -9,10 +9,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введи слово");
         String s = sc.nextLine().replaceAll("\\s", "").toLowerCase();
-        System.out.println(isPolindrome(s) ? "Это полидромное слово" : "Это не полидромное слово");
+        System.out.println(isPalindrome(s) ? "Это полидромное слово" : "Это не полидромное слово");
     }
 
-    public static boolean isPolindrome(String word) {
+    public static boolean isPalindrome(String word) {
         int left = 0, right = word.length() - 1;
         while (left < right) {
             if (word.charAt(left++) != word.charAt(right--)) return false;
